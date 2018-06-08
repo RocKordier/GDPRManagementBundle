@@ -1,0 +1,4 @@
+ehdev_gdpr_controller:
+    resource: "@EHDevGDPRManagementBundle/Controller/"
+    type:     annotation
+    prefix:   /gdpr
