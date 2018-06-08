@@ -4,10 +4,8 @@ declare(strict_types=1);
 namespace EHDev\GDPRManagementBundle\Model;
 
 use Doctrine\Common\Collections\Collection;
-use Oro\Bundle\OrganizationBundle\Entity\OrganizationInterface;
 
 interface ProcessActivityInterface
-    extends OrganizationInterface
 {
     const DELETION_TYPE_OPT_OUT   = 'opt_out';
     const DELETION_TYPE_INTERVAL  = 'interval';
@@ -26,21 +24,25 @@ interface ProcessActivityInterface
 
     public function getDeletionType(): ?string;
 
-    public function setDeletionType(string $type);
+    public function setDeletionType(string $type): void;
 
     public function getAffectedPersonTypes(): Collection;
 
-    public function setAffectedPersonTypes(Collection $types);
+    public function setAffectedPersonTypes(Collection $types): void;
 
-    public function getContact(): ?ContactInterface;
+    public function getContacts(): Collection;
 
-    public function setContact(ContactInterface $contact);
+    public function setContacts(Collection $collection): void;
 
     public function getDataTypes(): Collection;
 
-    public function setDataTypes(Collection $type);
+    public function setDataTypes(Collection $type): void;
 
     public function getLegalBasis(): string;
 
-    public function setLegalBasis(string $legal);
+    public function setLegalBasis(string $legal): void;
+
+    public function getGDPROrganizations(): Collection;
+
+    public function setGDPROrganizations(Collection $organization): void;
 }
