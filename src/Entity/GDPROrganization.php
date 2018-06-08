@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_organization")
+ * @ORM\Table(name="ehdev_gdpr_organization")
  * @UniqueEntity(fields={"label"})
  */
 class GDPROrganization implements GDPROrganizationInterface

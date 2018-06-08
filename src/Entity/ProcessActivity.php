@@ -15,7 +15,7 @@ use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_process_activity")
+ * @ORM\Table(name="ehdev_gdpr_process_activity")
  * @Config(
  *     defaultValues={
  *         "comment"={

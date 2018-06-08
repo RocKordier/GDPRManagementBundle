@@ -11,7 +11,7 @@ use EHDev\GDPRManagementBundle\Model\ProcessActivityInterface;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_directory")
+ * @ORM\Table(name="ehdev_gdpr_directory")
  */
 class Directory implements DirectoryInterface
 {

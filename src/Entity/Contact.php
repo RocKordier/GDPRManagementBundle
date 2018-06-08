@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_contact")
+ * @ORM\Table(name="ehdev_gdpr_contact")
  */
 class Contact implements ContactInterface
 {
