@@ -16,7 +16,7 @@ class Contact implements ContactInterface
     /**
      * @var string
      *
-     * @ORM\Id @ORM\Column
+     * @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue
      */
     protected $id;
     /**
