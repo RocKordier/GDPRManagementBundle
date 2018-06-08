@@ -29,7 +29,7 @@
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "oro/platform": "~2.6",
         "ehdev/oro-basics-bundle": "^0.0.9"
     },
