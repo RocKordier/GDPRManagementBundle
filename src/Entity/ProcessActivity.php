@@ -4,17 +4,31 @@ declare(strict_types=1);
 namespace EHDev\GDPRManagementBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
-use EHDev\GDPRManagementBundle\Model\GDPROrganizationInterface;
+use EHDev\GDPRManagementBundle\Model\ExtendProcessActivity;
 use EHDev\GDPRManagementBundle\Model\ProcessActivityInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use EHDev\BasicsBundle\Entity\Traits\OrganizationOwnerTrait;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
+
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="ehedev_gdpr_process_activity")
+ * @Config(
+ *     defaultValues={
+ *         "comment"={
+ *             "enabled" = true
+ *         },
+ *         "tag"={
+ *             "enabled" = true
+ *         }
+ *     }
+ * )
  */
-class ProcessActivity implements ProcessActivityInterface
+class ProcessActivity extends ExtendProcessActivity
+    implements ProcessActivityInterface
 {
     use OrganizationOwnerTrait;
 
