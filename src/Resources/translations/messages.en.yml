@@ -3,3 +3,4 @@ ehdev:
         navigation:
             tab: GDPR - Management
             overview_link:  GDPR Overview
+            organizations_link: Organizations
