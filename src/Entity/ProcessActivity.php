@@ -11,7 +11,7 @@ use EHDev\BasicsBundle\Entity\Traits\OrganizationOwnerTrait;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_process_activity)
+ * @ORM\Table(name="ehedev_gdpr_process_activity")
  */
 class ProcessActivity implements ProcessActivityInterface
 {
@@ -78,7 +78,7 @@ class ProcessActivity implements ProcessActivityInterface
     protected $legalBasis;
 
     /**
-     * @var string
+     * @var Collection
      *
      * @ORM\ManyToMany(targetEntity="DataType")
      */
@@ -137,6 +137,16 @@ class ProcessActivity implements ProcessActivityInterface
     public function getDataTypes(): Collection
     {
         return $this->dataTypes;
+    }
+
+    public function getContacts(): Collection
+    {
+        return $this->contacts;
+    }
+
+    public function setContacts(Collection $collection)
+    {
+        $this->contacts = $collection;
     }
 
     public function setDataTypes(Collection $type)
