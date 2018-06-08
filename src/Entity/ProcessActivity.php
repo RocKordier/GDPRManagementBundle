@@ -11,7 +11,7 @@ use EHDev\BasicsBundle\Entity\Traits\OrganizationOwnerTrait;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="ehedev_gdpr_process_activity)
+ * @ORM\Table(name="ehedev_gdpr_process_activity")
  */
 class ProcessActivity implements ProcessActivityInterface
 {

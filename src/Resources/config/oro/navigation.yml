@@ -1,0 +1,18 @@
+navigation:
+    menu_config:
+        items:
+            ehdev_gdpr_tab:
+                uri: '#'
+                label: 'ehdev.gdpr.navigation.tab'
+                position: 10
+            ehdev_gdpr_overview_link:
+                label: 'ehdev.gdpr.navigation.overview_link'
+                route:   'ehdev_gdpr_overview_index'
+                extras:
+                    icon: fa-puzzle-piece
+        tree:
+            application_menu:
+                children:
+                    ehdev_gdpr_tab:
+                        children:
+                            ehdev_gdpr_overview_link: ~
