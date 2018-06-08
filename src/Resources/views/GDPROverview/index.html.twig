@@ -3,10 +3,5 @@
 {% set pageTitle = 'ehdev.gdpr.navigation.overview_link'|trans %}
 
 {% set id = 'ehdev_gdpr_overview' %}
-
-{% block content_data %}
-    {% set dataBlocks = [] %}
-    {% set data = {'dataBlocks': dataBlocks} %}
-
-    {{ parent() }}
-{% endblock %}
+{% set dataBlocks = [] %}
+{% set data = {'dataBlocks': dataBlocks} %}
