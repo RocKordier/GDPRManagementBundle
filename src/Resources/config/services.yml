@@ -1,0 +1,20 @@
+services:
+    ehedev_gdpr.form.process_activity_type:
+        class: EHDev\GDPRManagementBundle\Form\Type\ProcessActivityType
+        tags:
+            - { name: form.type }
+
+    ehedev_gdpr.form.data_type:
+        class: EHDev\GDPRManagementBundle\Form\Type\DataTypeFormType
+        tags:
+            - { name: form.type }
+
+    ehedev_gdpr.form.contact_type:
+        class: EHDev\GDPRManagementBundle\Form\Type\ContactType
+        tags:
+            - { name: form.type }
+
+    ehedev_gdpr.form.affected_person_type:
+        class: EHDev\GDPRManagementBundle\Form\Type\AffectedPersonTypeFormType
+        tags:
+            - { name: form.type }

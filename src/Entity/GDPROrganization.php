@@ -5,10 +5,13 @@ namespace EHDev\GDPRManagementBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use EHDev\GDPRManagementBundle\Model\GDPROrganizationInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="ehedev_gdpr_organization")
+ * @UniqueEntity(fields={"label"})
  */
 class GDPROrganization implements GDPROrganizationInterface
 {
@@ -20,18 +23,28 @@ class GDPROrganization implements GDPROrganizationInterface
     private $id;
 
     /**
-     * @var bool
+     * @var string
      *
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
      */
-    private $foreignCountry;
+    private $label;
 
     /**
      * @var bool
      *
      * @ORM\Column(type="boolean")
+     * @Assert\NotBlank()
      */
-    private $foreignOrganization;
+    private $foreignCountry = false;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(type="boolean")
+     * @Assert\NotBlank()
+     */
+    private $foreignOrganization = false;
 
     public function getId(): int
     {
@@ -56,5 +69,15 @@ class GDPROrganization implements GDPROrganizationInterface
     public function setForeignCountry(bool $value)
     {
         $this->foreignCountry = $value;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
+    }
+
+    public function setLabel(string $label)
+    {
+        $this->label = $label;
     }
 }
