@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace EHDev\GDPRManagementBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
+use EHDev\GDPRManagementBundle\Model\GDPROrganizationInterface;
 use EHDev\GDPRManagementBundle\Model\ProcessActivityInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -84,6 +85,13 @@ class ProcessActivity implements ProcessActivityInterface
      */
     protected $dataTypes;
 
+    /**
+     * @var Collection
+     *
+     * @ORM\ManyToMany(targetEntity="GDPROrganization")
+     */
+    protected $gdprOrganizations;
+
     public function getObjective(): ?string
     {
         return $this->objective;
@@ -119,7 +127,7 @@ class ProcessActivity implements ProcessActivityInterface
         return $this->deletionType;
     }
 
-    public function setDeletionType(string $type)
+    public function setDeletionType(string $type): void
     {
         $this->deletionType = $type;
     }
@@ -129,7 +137,7 @@ class ProcessActivity implements ProcessActivityInterface
         return $this->affectedPersonTypes;
     }
 
-    public function setAffectedPersonTypes(Collection $types)
+    public function setAffectedPersonTypes(Collection $types): void
     {
         $this->affectedPersonTypes = $types;
     }
@@ -144,12 +152,12 @@ class ProcessActivity implements ProcessActivityInterface
         return $this->contacts;
     }
 
-    public function setContacts(Collection $collection)
+    public function setContacts(Collection $collection): void
     {
         $this->contacts = $collection;
     }
 
-    public function setDataTypes(Collection $type)
+    public function setDataTypes(Collection $type): void
     {
         $this->dataTypes = $type;
     }
@@ -159,8 +167,18 @@ class ProcessActivity implements ProcessActivityInterface
         return $this->legalBasis;
     }
 
-    public function setLegalBasis(string $legal)
+    public function setLegalBasis(string $legal): void
     {
         $this->legalBasis = $legal;
+    }
+
+    public function getGDPROrganizations(): Collection
+    {
+        return $this->gdprOrganizations;
+    }
+
+    public function setGDPROrganizations(Collection $organizations): void
+    {
+        $this->gdprOrganizations = $organizations;
     }
 }
