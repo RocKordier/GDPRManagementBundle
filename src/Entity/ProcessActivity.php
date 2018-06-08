@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace EHDev\GDPRManagementBundle\Entity;
 
-use Doctrine\Common\Collections\Collection
+use Doctrine\Common\Collections\Collection;
 use EHDev\GDPRManagementBundle\Model\ProcessActivityInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
