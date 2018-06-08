@@ -4,3 +4,65 @@ ehdev:
             tab: GDPR - Management
             overview_link:  GDPR Overview
             organizations_link: Organizations
+
+    gdprmanagment:
+        contact:
+            entity_label: Contact
+            entity_plural_label: Contacts
+            id:
+                label: Id
+            name:
+                label: Name
+            company:
+                label: Company
+            position:
+                label: Position
+            phone:
+                label: Phone
+            email:
+                label: E-Mailadress
+            address:
+                label: Address
+
+        affectedpersontype:
+            entity_label: Affected Person Type
+            entity_plural_label: Affected Person Types
+            id:
+                label: ID
+            label:
+                label: Label
+        datatype:
+            entity_label: Data
+            entity_plural_label: Data
+            id.label: Id
+            label:
+                label: Label
+            sensitive:
+                label: Is this sensitive?
+
+        directory:
+            entity_label: Directory
+            entity_plural_label: Directories
+            id.label: ID
+            activity.label: Activity
+        gdprorganization:
+            entity_label: Organization
+            entity_plural_label: Organizations
+            id.label: ID
+            label:
+                label: Label
+            foreign_country:
+                label: Foreign Country
+            foreign_organization:
+                label: Foreign Organization
+
+        processactivity:
+            entity_label: Process Activity
+            entity_plural_label: Process Activity
+            serialized_data.label: Serialized Data
+            id.label: ID
+            objective.label: Objective
+            source.label: Source
+            deletion_term.label: Deletion Term
+            deletion_type.label: Deletion Type
+            legal_basis.label: Legal Basis

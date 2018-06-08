@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace EHDev\GDPRManagementBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
-use EHDev\GDPRManagementBundle\Model\ContactInterface;
 use EHDev\GDPRManagementBundle\Model\DirectoryInterface;
 use Doctrine\ORM\Mapping as ORM;
 use EHDev\GDPRManagementBundle\Model\ProcessActivityInterface;
